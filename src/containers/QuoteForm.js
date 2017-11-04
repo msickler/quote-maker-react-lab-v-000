@@ -17,11 +17,12 @@ export class QuoteForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault()
-    this.props.addQuote(this.state)
-    this.setState({
-      author: '', content: ''
-    })
-  }
+    this.props.addQuote(this.state);
+      this.setState({
+        author: '',
+        content: ''
+      });
+ }
 
   render() {
     return (
