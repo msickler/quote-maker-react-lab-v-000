@@ -3,8 +3,7 @@ export default (state = [], action) => {
     case 'ADD_QUOTE':
       return [].concat(state, action.quote)
     case 'REMOVE_QUOTE':
-      let idx = state.indexOf(action.quoteId)
-      return [].concat(state.slice(0, idx), state.slice(idx + 1, state.length))
+      return state.filter(quote => quote.id !== action.quoteId)
     case 'UPVOTE_QUOTE':
       let upvote = state.find(quote => quote.id === action.quoteId)
       return [Object.assign({}, upvote, { votes: ++upvote.votes })]
