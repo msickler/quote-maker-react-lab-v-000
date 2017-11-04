@@ -69,4 +69,14 @@ export class QuoteForm extends Component {
   }
 }
 
-export default connect(null, {})(QuoteForm);
+const mapStateToProps = (state) => {
+  return { quotes: state.quotes }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    addQuote: addQuote
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(QuoteForm);
