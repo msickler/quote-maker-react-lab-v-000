@@ -9,8 +9,8 @@ export class App extends Component {
           <h1>Quote Maker</h1>
         </div>
         <hr />
-        {/* 
-          TODO: 
+        {/*
+          TODO:
 
           Render QuoteForm and Quotes Components
          */}
