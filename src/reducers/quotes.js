@@ -6,7 +6,7 @@ export default (state = [], action) => {
       let idx = state.indexOf(action.quoteId)
       return [].concat(state.slice(0, idx), state.slice(idx + 1, state.length))
     case 'UPVOTE_QUOTE':
-      let upvote = state.find.(quote => quote.id === action.quoteId)
+      let upvote = state.find(quote => quote.id === action.quoteId)
       return [Object.assign({}, upvote, { votes: ++upvote.votes })]
     case 'DOWNVOTE_QUOTE':
       let downvote = state.find.(quote => quote.id === action.quoteId)
