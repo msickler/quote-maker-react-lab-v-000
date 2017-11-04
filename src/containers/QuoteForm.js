@@ -8,7 +8,7 @@ export class QuoteForm extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { content: '', author: '' }
+    this.state = { author: '', content: '' }
   }
 
   handleOnChange = event => {
