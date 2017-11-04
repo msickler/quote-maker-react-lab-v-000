@@ -12,7 +12,7 @@ export default (state = [], action) => {
       let downvote = state.find.(quote => quote.id === action.quoteId)
       let downvoting = (downvote.votes > 0) ? --downvote.votes : 0
       return [Object.assign({}, downvote, {votes: downvoting})]
-    default: 
-      return state 
+    default:
+      return state
   }
 }
